@@ -252,7 +252,7 @@ function StickyScrollSteps() {
     offset: ["start start", "end end"],
   });
 
-  const activeIndex = useTransform(scrollYProgress, [0, 0.33, 0.66, 1], [0, 0, 1, 2]);
+  const activeIndex = useTransform(scrollYProgress, [0, 0.15, 0.5, 0.85], [0, 0, 1, 2]);
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -263,7 +263,7 @@ function StickyScrollSteps() {
     <section
       ref={containerRef}
       id="how-it-works"
-      style={{ height: "300vh", position: "relative" }}
+      style={{ height: "180vh", position: "relative" }}
     >
       <div style={{
         position: "sticky", top: 0, height: "100vh",
